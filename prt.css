@@ -1,0 +1,1086 @@
+
+
+a{
+    color:#fff;
+    text-decoration:none;
+}
+.navbar{
+position:fixed;
+left:0;
+top:0;
+width:80%;
+padding: 25px 9%;
+
+display:flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+visibility: hidden;
+opacity: 0;
+
+animation: show-content 1.5s linear forwards;
+animation-delay: 1.2s;
+}
+@keyframes show-content {
+    100%{
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+
+.navbar .Logo{
+font-size: 30px;
+font-weight: 700;
+
+
+}
+.navbar ul{
+    display: flex;
+
+}
+
+.navbar ul li{
+list-style: none;
+margin-left: 35px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+.navbar ul li:hover a,
+.navbar ul li.active a{
+color:#7cf03d;
+
+}
+.home{
+display: flex;
+align-items: center;
+gap: 50px;
+height: 100vh;
+padding: 60px 9% 0;
+color: #fff;
+visibility: hidden;
+opacity: 0;
+
+animation: show-content 1.5s linear forwards;
+animation-delay: 1.6s;
+
+}
+.home-info h1 {
+    font-size: 55px;
+
+}
+.home-info h2 {
+display: inline-block;
+font-size: 32px;
+margin-top: -10px;
+background: #1f242d;
+
+}
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #7cf03d;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+
+}
+@keyframes display-text {
+    25%,100%{
+        display: none;
+    }
+
+}
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #7cf03d;
+    color: #7cf03d;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+
+
+}
+@keyframes fill-text {
+    10%,100% {
+        width: 0;
+
+    }
+    70%,90% {
+        width: 100%;
+
+    }
+
+}
+
+.home-info p {
+font-size: 16px;
+margin: 10px 0 25px;
+}
+.home-info .btn-sci{
+display: flex;
+align-items: center;
+}
+.btn{
+display: inline-block;
+padding: 10px 30px;
+background: #7cf03d;
+border: 2px solid #7cf03d;
+border-radius: 40px;
+box-shadow: 0 0 10px #7cf03d;
+font-size: 16px ;
+color: #1f242d;
+font-weight: 600;
+transition: .5s;
+}
+.btn:hover{
+background: transparent;
+color: #7cf03d;
+box-shadow: none;
+}
+.home-info .btn-sci .sci{
+margin-left: 20px;
+}
+.home-info .btn-sci .sci a{
+display: inline-flex;
+padding: 8px;
+border: 2px solid #7cf03d;
+border-radius: 50%;
+font-size: 20px;
+color:#7cf03d;
+margin:0 8px;
+transition: .5s;
+}
+.home-info .btn-sci .sci a:hover{
+background: #7cf03d;
+color: #1f242d;
+box-shadow: 0 0 10px #7cf03d;
+
+}
+.home-img .img-box {
+position: relative;
+width: 32vw;
+height: 32vw;
+
+border-radius: 50%;
+padding: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+
+
+}
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent , transparent , transparent , #7cf03d );
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+.home-img .img-box::after {
+    animation-delay: -5s;
+
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+
+    }
+
+
+}
+
+
+
+
+
+.home-img .img-box .img-item {
+position:relative;
+width: 100%;
+height: 100%;
+background: #1f242d;
+border-radius: 50%;
+border: .1px solid #1f242d;
+display: flex;
+justify-content: center;
+z-index: 1;
+overflow: hidden;
+}
+.home-img .img-box .img-item img {
+position: absolute;
+
+display: block;
+width: 85%;
+object-fit: cover;
+
+}
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+
+
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+
+}
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+
+}
+/* Unique section that doesn't affect the rest of the site */
+.icon-hero-section {
+    display: flex;
+    justify-content: center; /* Perfect horizontal center */
+    align-items: center;     /* Perfect vertical center */
+    height: 100vh;           /* Takes up the whole screen height */
+    width: 100%;
+    background: transparent; /* Or set your specific background color */
+}
+
+.icon-center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The actual icon styling */
+.unique-giant-icon {
+    font-size: 250px;        /* Set the size here */
+    color: #7cf03d;          /* Your green theme color */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect just for this icon */
+.unique-giant-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 30px #7cf03d);
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+/* --- Portfolio Section Layout --- */
+.portfolio-container {
+    display: grid;
+    /* This creates a responsive grid: 2 columns mostly, stacking on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem;
+    padding: 100px 10%; /* Adjust padding to fit under your navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Card Design --- */
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Animation setup */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i)); /* Uses your --i variable */
+}
+
+/* Hover Effect */
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf03d; /* Neon glow color matches typical portfolio themes */
+}
+
+/* --- Image Area --- */
+.card-img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .card-img img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* --- Text Content --- */
+.card-content {
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Assuming dark background */
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* --- The Button Link --- */
+.btn-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #7cf03d; /* Accent color */
+    color: #1f242d; /* Dark text for contrast */
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 10px #7cf03d;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    box-shadow: 0 0 20px #7cf03d, 0 0 40px #7cf03d;
+    background: #fff;
+}
+
+/* --- The Keyframe Animation --- */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Laptops & Small Desktops (up to 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+        padding: 20px 15% 20px 5%;
+    }
+   .navbar ul {
+        margin-right: auto; /* This pushes the links all the way to the Logo */
+        margin-left: 280px;   /* This creates a gap between Logo and Links */
+   }
+    .home {
+        padding: 0 5%;
+    }
+
+}
+@media (max-width: 912px) {
+    .navbar {
+        width: 100%;
+        /* Balanced padding: 20px top/bottom, 5% left/right */
+        padding: 20px 5%; 
+        box-sizing: border-box; /* Ensures padding doesn't increase width */
+        display: flex;
+        justify-content: space-between; /* This naturally pushes links away from the Logo */
+    }
+
+    .navbar ul {
+        /* Reduced from 280px to move links further left */
+        margin-left: 50px; 
+        margin-right: 0;
+        gap: 20px; /* Adds consistent space between links */
+    }
+
+    .navbar .Logo {
+        /* Ensuring the logo stays tucked to the left */
+        margin-left: 0;
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+}
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    .navbar ul {
+        margin-right: auto; /* This pushes the links all the way to the Logo */
+        margin-left: 50px;   /* This creates a gap between Logo and Links */
+    }
+    .navbar ul li {
+        margin-left: 20px;
+    }
+
+    .home {
+        flex-direction: column-reverse; /* Image moves to top, text to bottom */
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+        padding-top: 100px; /* Space for fixed navbar */
+    }
+
+    .home-img .img-box {
+        width: 50vw; /* Larger image on smaller screens */
+        height: 50vw;
+    }
+
+    .home-info h1 {
+        font-size: 40px;
+    }
+
+    .home-info h2 {
+        font-size: 26px;
+    }
+
+    .home-info .btn-sci {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+    }
+}
+
+/* Mobile Phones (up to 480px) */
+/*@media (max-width: 480px) {
+    .navbar .Logo {
+        font-size: 24px;
+    }
+
+    /* Consider a simple hamburger menu or smaller text for nav */
+    /*.navbar ul li a {
+        font-size: 16px;
+    }
+
+    .navbar ul li {
+        margin-left: 15px;
+    }
+
+    .home-img .img-box {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .home-info h1 {
+        font-size: 32px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+}
+/* Mobile Phones (up to 480px) */
+/*@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 5%;
+        height: auto;
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        margin-top: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar ul li {
+        margin: 5px 10px;
+    }
+
+    .home {
+        height: auto; /* Allow the page to grow with the content */
+       /* min-height: 100vh; 
+        padding: 80px 5% 40px; /* Reduced top padding to lift content up */
+       /* gap: 20px; /* Tightened gap between image and text */
+    /*}
+
+    .home-img .img-box {
+        width: 60vw; /* Reduced size so it takes up less vertical space */
+       /* height: 60vw;
+        margin-top: 0; /* Ensures it stays high on the screen */
+    /*}
+
+    /*.home-info h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+        margin: 10px 0 15px; /* Tighter margins to save space */
+    /*}
+
+    /*.btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+    /* Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        padding: 15px 4%; /* Smaller side padding to give more horizontal room */
+        justify-content: space-between;
+    }
+
+    .navbar .Logo {
+        font-size: 20px; /* Slightly smaller logo to save space */
+    }
+
+    .navbar ul {
+        margin-left: 0; /* REMOVES the 50px/280px gap that was pushing links off-screen */
+        display: flex;
+        gap: 12px; /* Controlled spacing between links */
+    }
+
+    .navbar ul li {
+        margin-left: 0; /* Resetting previous margins */
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* Smaller text ensures all links fit on one line */
+    }
+
+    .home {
+        height: auto;
+        min-height: 100vh;
+        padding: 70px 5% 30px; /* Pulls content up further */
+        gap: 15px;
+    }
+
+    .home-img .img-box {
+        width: 65vw;
+        height: 65vw;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+    }
+
+    /* Adjusting the animation-delay for mobile so user sees content faster */
+    .home-info p {
+        font-size: 14px;
+        margin: 8px 0 15px;
+    }
+}
+/* Small Mobile Devices (iPhone SE/Mini - 375px) */
+/*@media (max-width: 376px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 3%; 
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .navbar .Logo {
+        font-size: 18px; 
+    }
+
+    .navbar ul {
+        margin-left: 0; 
+        gap: 8px; 
+    }
+
+    .navbar ul li a {
+        font-size: 11px; 
+    }
+
+    .home {
+        flex-direction: column-reverse; 
+        justify-content: flex-start; 
+        padding: 60px 5% 20px; 
+        height: auto;
+        min-height: 100vh;
+        gap: 0; 
+    }
+
+    .home-img .img-box {
+        width: 50vw; 
+        height: 50vw;
+        margin: 0 auto 10px; 
+        transform: translateY(-10px); 
+    }
+
+    .home-info {
+        margin-top: -15px; 
+    }
+
+    .home-info h1 {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .home-info h2 {
+        font-size: 15px;
+    }
+
+    .home-info p {
+        font-size: 12px;
+        margin: 5px 0 15px;
+        line-height: 1.3;
+    }
+
+    .btn-sci {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+    }
+}
+/* Final "Total Control" Fix for 375px */
+/* Balanced Fix for 375px - Large but High */
+/*@media (max-width: 376px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 4%;
+        box-sizing: border-box;
+    }
+
+    .navbar .Logo {
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        gap: 8px; 
+    }
+
+    .navbar ul li a {
+        font-size: 12px; 
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        padding-top: 50px; 
+        height: auto;
+        min-height: 100vh;
+        gap: 0;
+    }
+
+    .home-img .img-box {
+        width: 60vw; 
+        height: 60vw;
+        margin: 0 auto;
+        transform: translateY(-15px); 
+    }
+
+    .home-info {
+        margin-top: -25px; 
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    .home-info .btn-sci {
+        margin-top: 5px;
+        justify-content: center;
+        
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+/* "Max-Lift" Fix for 375px - Moving EVERYTHING Up */
+/*@media (max-width: 376px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 4% 5px; 
+        box-sizing: border-box;
+    }
+
+    .navbar .Logo {
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        gap: 8px; 
+    }
+
+    .navbar ul li a {
+        font-size: 12px; 
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        
+        padding-top: 5px; 
+        height: auto;
+        min-height: 100vh;
+        gap: 0;
+    }
+
+    .home-img .img-box {
+        width: 60vw; 
+        height: 60vw;
+        margin: 0 auto;
+        
+        transform: translateY(-35px); 
+    }
+
+    .home-info {
+        
+        margin-top: -85px; 
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+        line-height: 0.9; 
+        margin-bottom: 0;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+        margin-top: -2px; 
+    }
+
+    .home-info p {
+        font-size: 14px;
+        
+        margin: 2px auto 6px; 
+        max-width: 90%;
+        line-height: 1.1;
+    }
+
+    .home-info .btn-sci {
+        margin-top: 0; 
+        justify-content: center;
+        
+        transform: translateY(-5px) scale(0.9); 
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+    /* "Ultimate-Lift" for 375px - Smaller Photo & Maximum Raise */
+@media (max-width: 376px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 4% 5px;
+        box-sizing: border-box;
+    }
+
+    .navbar .Logo {
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        gap: 8px; 
+    }
+
+    .navbar ul li a {
+        font-size: 12px; 
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        padding-top: 0; /* Zero top padding to start at the absolute top */
+        height: auto;
+        min-height: 100vh;
+        gap: 0;
+    }
+
+    .home-img .img-box {
+        width: 50vw; /* Reduced size to save vertical space */
+        height: 50vw;
+        margin: 50px;
+        /* Pulls the photo significantly UP toward the navbar */
+        transform: translateY(-45px); 
+    }
+
+    .home-info {
+        /* Extreme lift to pull everything up behind the photo area */
+        margin-top: -100px; 
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 28px;
+        line-height: 0.9; 
+        margin-bottom: 0;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+        margin-top: -5px; /* Pulls title even closer to name */
+    }
+
+    .home-info p {
+        font-size: 14px;
+        margin: 2px auto 8px; 
+        max-width: 90%;
+        line-height: 1.1;
+    }
+
+    .home-info .btn-sci {
+        margin-top: 0; 
+        justify-content: center;
+        /* Ensures buttons and social icons are high and visible */
+        transform: translateY(-10px) scale(0.95); 
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 912px) and (max-width: 1280px) {
+    .portfolio-container {
+        display: flex;
+        flex-direction: row; /* Horizontal alignment */
+        justify-content: center;
+        align-items: stretch; /* Forces identical height for all cards */
+        
+        /* Lowered Position: 150px top padding pushes the row down */
+        padding: 150px 40px 60px; 
+        gap: 25px; /* Wider gap for larger screens */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .portfolio-card {
+        flex: 1;
+        max-width: 280px; /* Slightly wider cards for 1280px screens */
+        height: 380px;    /* Fixed height for perfect symmetry */
+        display: flex;
+        flex-direction: column;
+        
+        /* Standardizing animation/appearance */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card-img {
+        height: 150px; /* Larger image area for desktop */
+        flex-shrink: 0;
+    }
+
+    .card-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Buttons perfectly aligned at bottom */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        /* Keeps text blocks uniform */
+        display: -webkit-box;
+        
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-link {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        align-self: center;
+        width: fit-content;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- Desktop / Large Tablet (1024px & 912px) --- */
+/*@media (max-width: 1024px), (max-width: 912px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); 
+        max-width: 800px;
+        padding-top: 120px; 
+    }
+    
+    .portfolio-card {
+        max-width: 350px;
+        justify-self: center; 
+    }
+}
+
+/* --- Standard Tablet (768px) --- */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+        gap: 1.5rem;
+        padding-top: 110px;
+    }
+
+    .card-img {
+        height: 150px; /* Make card shorter */
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Mobile Phones (480px & 376px) --- */
+@media (max-width: 480px), (max-width: 376px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* Still 2x2 even on tiny screens */
+        gap: 10px;
+        padding: 120px 10px 40px; /* Lowered and tight side padding */
+        max-width: 100%;
+    }
+
+    .card-img {
+        height: 100px; /* Tiny images to fit 2x2 layout */
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Fixed Line Clamp so cards stay the same height */
+    .card-content p {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .btn-link {
+        padding: 6px 15px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Specific fix for 376px (iPhone SE size) */
+@media (max-width: 376px) {
+    .portfolio-container {
+        gap: 8px;
+    }
+    
+    .card-content h3 {
+        font-size: 0.8rem;
+    }
+}
+
+
+

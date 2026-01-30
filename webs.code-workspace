@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../webs"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "portfolio web"
+	}
+}
